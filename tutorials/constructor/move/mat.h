@@ -20,6 +20,8 @@ class Matrix {
 
         Matrix(Matrix&&);
         Matrix& operator=(Matrix&&);
+
+        Matrix operator+(const Matrix&, const Matrix&); // 두 Matrix를 합하고, 새로운 Matrix를 반환.
     private:
         std::array<int, 2> dim; // # of rows = dim[0], # of cols = dim[1]
         T* elem;    // T type이고, dim[0]*dim[1]개의 원소를 갖는 포인터
@@ -53,4 +55,20 @@ Matrix& Matrix::operator=(Matrix&& rhs) {
     std::swap(dim, rhs.dim);
     std::swap(elem, rhs.elem);
     return *this;
+}
+
+// Matrix를 합하는 연산은 꽤 비싼 연산이다.
+// 또한 값에 의한 반환을 하고 있음을 잘 보자.
+Matrix operator+(const Matrix& a, const Matrix& b) {
+    if(a.dim[0] != b.dim[0] || a.dim[1] != b.dim[1]) {
+        throw "unequal Matrix size in +";
+    }
+    Matrix ret{a.dim[0], a.dim[1]};
+    constexpr int n {a.size()};
+    for(int i = 0; i != n; ++i) {
+        ret.elem[i] = a.elem[i] + b.elem[i];
+    }
+    // Matrix가 이동 생성자를 갖고 있으므로 외부에서 ret 객체를 받는 과정은
+    // 암묵적으로 컴파일러에 의해 이동 연산으로 처리된다.
+    return ret;
 }
