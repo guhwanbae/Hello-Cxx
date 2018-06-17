@@ -14,7 +14,7 @@ class Sequence {
         ~Sequence();
         void traverse();
     private :
-        int size;
+        size_t size;
         T* elem;
 };
 
