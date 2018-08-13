@@ -1,0 +1,26 @@
+deductive_container_type.cpp:11:7: note: template is declared here
+class TypeCheck;
+      ^
+deductive_container_type.cpp:37:47: error: implicit instantiation of undefined template 'TypeCheck<const
+      std::__1::basic_string<char> &>'
+    TypeCheck<decltype(element_cxx11(sv, 2))> svType;
+                                              ^
+deductive_container_type.cpp:11:7: note: template is declared here
+class TypeCheck;
+      ^
+deductive_container_type.cpp:41:28: error: implicit instantiation of undefined template
+      'TypeCheck<double>'
+    TypeCheck<decltype(x)> xType;
+                           ^
+deductive_container_type.cpp:11:7: note: template is declared here
+class TypeCheck;
+      ^
+deductive_container_type.cpp:43:28: error: implicit instantiation of undefined template
+      'TypeCheck<const double>'
+    TypeCheck<decltype(y)> yType;
+                           ^
+deductive_container_type.cpp:11:7: note: template is declared here
+class TypeCheck;
+      ^
+4 errors generated.
+make: *** [deductive_container_type] Error 1
