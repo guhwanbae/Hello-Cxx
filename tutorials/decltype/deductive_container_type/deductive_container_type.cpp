@@ -27,6 +27,8 @@ element_cxx11(Container&& c, Index i)
     return std::forward<Container>(c)[i];
 }
 
+int hf(const double r) { return 0; };
+
 int main() {
     std::vector<int> iv(5, 1);
     // Return type is int &.
@@ -41,6 +43,15 @@ int main() {
     TypeCheck<decltype(x)> xType;
     decltype(auto) y {palomenso};   // Type of y is const double.
     TypeCheck<decltype(y)> yType;
+
+    TypeCheck<decltype(hf)> hfType;
+    TypeCheck<decltype(&hf)> hfrType;
+
+    auto eq = [](const int x, const int y) { return (x==y); };
+    TypeCheck<decltype(eq)> eqType;
+
+    auto sum = [](const double x, const double y) -> double { return (x+y); };
+    TypeCheck<decltype(sum)> sumType;
 
     return 0;
 }
