@@ -1,0 +1,6 @@
+# no swap file
+*.swp
+
+
+#For MacOs
+*.DS_Store
