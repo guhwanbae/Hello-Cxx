@@ -1,0 +1,31 @@
+[System information]
+
+Linux guhwanbae-XPS-linux 4.13.10-041310-generic #201710270531 SMP Fri Oct 27 09:33:21 UTC 2017 x86_64 x86_64 x86_64 GNU/Linux
+
+
+----------------------Optimized program performance----------------------
+Fill a vector with random numbers : 2073ms
+It is multi-processor system. :)
+Accumulate sequence elements by using std::accumulate(single thread) : 37 ms
+Accumulate sequence elements by using std::accumulate(single_thread) : sum = 499986005
+
+
+Fill a vector with random numbers : 2066ms
+It is multi-processor system. :)
+Accumulate sequence elements by using parallel_accumulate(multi thread) : 14 ms
+Accumulate sequence elements by using parallel_accumulate(multi thread) : sum = 499986701
+
+
+----------------------Unoptimized program performance----------------------
+Fill a vector with random numbers : 4685ms
+It is multi-processor system. :)
+Accumulate sequence elements by using std::accumulate(single thread) : 764 ms
+Accumulate sequence elements by using std::accumulate(single_thread) : sum = 500001055
+
+
+Fill a vector with random numbers : 4658ms
+It is multi-processor system. :)
+Accumulate sequence elements by using parallel_accumulate(multi thread) : 181 ms
+Accumulate sequence elements by using parallel_accumulate(multi thread) : sum = 499996432
+
+
