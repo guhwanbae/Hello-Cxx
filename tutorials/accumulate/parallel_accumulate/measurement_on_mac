@@ -1,0 +1,35 @@
+[System information]
+
+Darwin Guhwans-MacBook-Pro.local 17.7.0 Darwin Kernel Version 17.7.0: Thu Jun 21 22:53:14 PDT 2018; root:xnu-4570.71.2~1/RELEASE_X86_64 x86_64
+
+
+----------------------Optimized program performance----------------------
+Fill a vector with random numbers : 2445ms
+It is multi-processor system. :)
+hardware_concurrency() : 4
+Accumulate sequence elements by using std::accumulate(single thread) : 20 ms
+Accumulate sequence elements by using std::accumulate(single_thread) : sum = 499936978
+
+
+Fill a vector with random numbers : 2465ms
+It is multi-processor system. :)
+hardware_concurrency() : 4
+Accumulate sequence elements by using parallel_accumulate(multi thread) : 14 ms
+Accumulate sequence elements by using parallel_accumulate(multi thread) : sum = 500014080
+
+
+----------------------Unoptimized program performance----------------------
+Fill a vector with random numbers : 9505ms
+It is multi-processor system. :)
+hardware_concurrency() : 4
+Accumulate sequence elements by using std::accumulate(single thread) : 372 ms
+Accumulate sequence elements by using std::accumulate(single_thread) : sum = 499949541
+
+
+Fill a vector with random numbers : 9572ms
+It is multi-processor system. :)
+hardware_concurrency() : 4
+Accumulate sequence elements by using parallel_accumulate(multi thread) : 197 ms
+Accumulate sequence elements by using parallel_accumulate(multi thread) : sum = 500037088
+
+
