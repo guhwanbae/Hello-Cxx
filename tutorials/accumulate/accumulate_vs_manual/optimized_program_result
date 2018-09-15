@@ -1,0 +1,5 @@
+Fill a vector with random numbers : 2057ms
+Accumulate sequence elements by looping manually : 41 ms
+Accumulate sequence elements by looping manually : sum = 499954098
+Accumulate sequence elements by using std::accumulate : 41 ms
+Accumulate sequence elements by using std::accumulate : sum = 499954098
