@@ -4,28 +4,32 @@ Linux guhwanbae-XPS-linux 4.13.10-041310-generic #201710270531 SMP Fri Oct 27 09
 
 
 ----------------------Optimized program performance----------------------
-Fill a vector with random numbers : 2073ms
+Fill a vector with random numbers : 2169ms
 It is multi-processor system. :)
+hardware_concurrency() : 8
 Accumulate sequence elements by using std::accumulate(single thread) : 37 ms
-Accumulate sequence elements by using std::accumulate(single_thread) : sum = 499986005
+Accumulate sequence elements by using std::accumulate(single_thread) : sum = 499976346
 
 
-Fill a vector with random numbers : 2066ms
+Fill a vector with random numbers : 2198ms
 It is multi-processor system. :)
-Accumulate sequence elements by using parallel_accumulate(multi thread) : 14 ms
-Accumulate sequence elements by using parallel_accumulate(multi thread) : sum = 499986701
+hardware_concurrency() : 8
+Accumulate sequence elements by using parallel_accumulate(multi thread) : 15 ms
+Accumulate sequence elements by using parallel_accumulate(multi thread) : sum = 499985014
 
 
 ----------------------Unoptimized program performance----------------------
-Fill a vector with random numbers : 4685ms
+Fill a vector with random numbers : 4824ms
 It is multi-processor system. :)
-Accumulate sequence elements by using std::accumulate(single thread) : 764 ms
-Accumulate sequence elements by using std::accumulate(single_thread) : sum = 500001055
+hardware_concurrency() : 8
+Accumulate sequence elements by using std::accumulate(single thread) : 760 ms
+Accumulate sequence elements by using std::accumulate(single_thread) : sum = 499968963
 
 
-Fill a vector with random numbers : 4658ms
+Fill a vector with random numbers : 4819ms
 It is multi-processor system. :)
-Accumulate sequence elements by using parallel_accumulate(multi thread) : 181 ms
-Accumulate sequence elements by using parallel_accumulate(multi thread) : sum = 499996432
+hardware_concurrency() : 8
+Accumulate sequence elements by using parallel_accumulate(multi thread) : 191 ms
+Accumulate sequence elements by using parallel_accumulate(multi thread) : sum = 500060682
 
 

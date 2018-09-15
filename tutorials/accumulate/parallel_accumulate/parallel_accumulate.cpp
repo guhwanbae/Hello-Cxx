@@ -95,10 +95,12 @@ int main(int argc, char* argv[]) {
     fill_as_randvals(seq.begin(), seq.end(), 0, 10);
 
     if(thread::hardware_concurrency() == 1) {
-        cout << "It is single-processor system. :(" << endl;
+        cout << "It is single-processor system. :( " << endl;
+        cout << "hardware_concurrency() : " << thread::hardware_concurrency() << endl;
     }
     else {
         cout << "It is multi-processor system. :)" << endl;
+        cout << "hardware_concurrency() : " << thread::hardware_concurrency() << endl;
     }
 
     if(option == "-p" || option == "--parallel") {
