@@ -1,0 +1,30 @@
+
+----------------------------------------------------------------
+launc_eager_taskes() : begin.
+FutureContainer : ctor.
+FutureContainer : push new task.
+FutureContainer : push new task.
+FutureContainer : push new task.
+FutureContainer : push new task.
+FutureContainer : push new task.
+launch_eager_taskes() : End of launch_lazy_taskes().
+FutureContainer : dtor.
+task1::Life Time : 1001 ms.
+task2::Life Time : 2005 ms.
+task3::Life Time : 3005 ms.
+task4::Life Time : 4005 ms.
+task5::Life Time : 5005 ms.
+FutureContainer::Life Time : 5006 ms.
+
+----------------------------------------------------------------
+launc_lazy_taskes() : begin.
+FutureContainer : ctor.
+FutureContainer : push new task.
+FutureContainer : push new task.
+FutureContainer : push new task.
+FutureContainer : push new task.
+FutureContainer : push new task.
+launch_lazy_taskes() : End of launch_lazy_taskes().
+FutureContainer : dtor.
+FutureContainer::Life Time : 0 ms.
+main() : End of this program.
