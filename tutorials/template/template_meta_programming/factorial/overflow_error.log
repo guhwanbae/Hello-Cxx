@@ -1,0 +1,2 @@
+g++ -std=c++11 -W -Wall factorial_calculated_at_compile_time.cc -o factorial_calculated_at_compile_time
+makefile:8: recipe for target 'target' failed
