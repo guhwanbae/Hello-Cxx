@@ -4,3 +4,8 @@
 
 #For MacOs
 *.DS_Store
+
+
+
+#For VsCode Editor
+*.vscode
